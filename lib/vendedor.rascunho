@@ -1,0 +1,66 @@
+def cadastrar_vendedor(self):
+        print(">>>CADASTRE-SE<<<\n")
+        print("|DADOS PESSOAIS|\n")
+        self._id = input("ID vendedor:")
+        self._nome_completo = input("Digite seu nome completo:")
+        self._nome_usuario = input("Crie seu nome de usuário:")
+        self._data_nasc = input("Data de nascimento:")
+        self._login = input("Login(Digite seu nome de usuário):")
+        self._senha = input("Crie uma senha somente com números:")
+        self._confirma_senha = input("Confirma senha(Digite novamente):\n")
+        print("ATENÇÂO!Anotou seu nome de usuário e nova senha? Deixe anotado para não esquecer, isso é de extrema importância para fazer login ao entrar novamente no sistema!Continue seu cadastro.\n")
+        self._rg = input("RG:")
+        self._cpf = input("CPF:")
+        self._cnh = input("Quais CNHs você possui?:")
+        self._email = input("E-mail:")
+        self._telefone = input("Telefone:\n")
+        print("|ENDEREÇO|\n")
+        self._cidade = input("Cidade:")
+        self._estado = input("Estado:")
+        self._cep = input("CEP:")
+        self._rua = input("Rua:")
+        self.numero_casa = input("N°:")
+        self._complemento = input("Complemento:\n")
+        self._ativo
+        self._inativo 
+        print("Cadastro efetuado com sucesso!\n")
+
+    def atualizar_cad_vendedor(self):
+        print(">>>CADASTRE-SE<<<\n")
+        print("|DADOS PESSOAIS|\n")
+        self._id = input("ID vendedor:")
+        self._nome_completo = input("Digite seu nome completo:")
+        self._nome_usuario = input("Crie seu nome de usuário:")
+        self._data_nasc = input("Data de nascimento:")
+        self._login = input("Login(Digite seu nome de usuário):")
+        self._senha = input("Crie uma senha somente com números:")
+        self._confirma_senha = input("Confirma senha(Digite novamente):\n")
+        print("ATENÇÂO!Anotou seu nome de usuário e nova senha? Deixe anotado para não esquecer, isso é de extrema importância para fazer login ao entrar novamente no sistema!Continue seu cadastro.\n")
+        self._rg = input("RG:")
+        self._cpf = input("CPF:")
+        self._cnh = input("Quais CNHs você possui?:")
+        self._email = input("E-mail:")
+        self._telefone = input("Telefone:\n")
+        print("|ENDEREÇO|\n")
+        self._cidade = input("Cidade:")
+        self._estado = input("Estado:")
+        self._cep = input("CEP:")
+        self._rua = input("Rua:")
+        self.numero_casa = input("N°:")
+        self._complemento = input("Complemento:\n")
+        self._ativo
+        self._inativo 
+        print("Cadastro atualizado com sucesso!\n")
+
+    def vizualizar_vendedor(self):
+        print(f" ID: {self._id_vendedor}\n Nome Completo: {self._nome_completo}\n Nome de usuário: {self._nome_usuario}\n Data nascimento: {self._data_nasc}\n Login: {self._login}\n Senha: {self._senha}\n Confirma senha: {self._confirma_senha}\n RG: {self._rg}\n CPF: {self._cpf}\n CNH: {self._cnh}\n E-mail: {self._email}\n Telefone: {self._telefone}\n Cidade: {self._cidade}\n Estado: {self._estado}\n CEP: {self._cep}\n Rua: {self._rua}\n N° casa: {self._numero_casa}\n Complemento: {self._complemento}\n")
+
+    def excluir_vendedor(self, id_vendedor):
+        self._id = id_vendedor
+        print("Vendedor excluído.")
+
+    def ativo(self):
+        self._ativo = True
+    
+    def inativo(self):
+        self._inativo = False
