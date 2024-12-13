@@ -1,36 +1,27 @@
-// CADASTRO CARRO FLUTTER
+// CADASTRO PEDIDO
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(CadastroCarro());
+  runApp(CadastroPedido());
 }
 
-class CadastroCarro extends StatefulWidget {
-  CadastroCarro({super.key});
+class CadastroPedido extends StatefulWidget {
+  CadastroPedido({super.key});
 
   @override
-  State<CadastroCarro> createState() => _HomePageState();
+  State<CadastroPedido> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<CadastroCarro> {
+class _HomePageState extends State<CadastroPedido> {
   TextEditingController _marcaController = TextEditingController();
   TextEditingController _modeloController = TextEditingController();
-  TextEditingController _placaController = TextEditingController();
   TextEditingController _corController = TextEditingController();
   TextEditingController _ano_fabController = TextEditingController();
   TextEditingController _ano_modController = TextEditingController();
   TextEditingController _potenciaController = TextEditingController();
-  TextEditingController _tipoController = TextEditingController();
-  TextEditingController _kmController = TextEditingController();
-  TextEditingController _renavamController = TextEditingController();
-  TextEditingController _ipvaController = TextEditingController();
-  TextEditingController _origemController = TextEditingController();
   TextEditingController _combustivelController = TextEditingController();
-  TextEditingController _preco_compraController = TextEditingController();
-  TextEditingController _preco_vendaController = TextEditingController();
-  TextEditingController _cidade_ufController = TextEditingController();
-  TextEditingController _portasController = TextEditingController();
+  TextEditingController _faixa_precoController = TextEditingController();
   TextEditingController _qnt_lugaresController = TextEditingController();
   TextEditingController _ar_condController = TextEditingController();
   TextEditingController _trava_vidrosController = TextEditingController();
@@ -42,44 +33,29 @@ class _HomePageState extends State<CadastroCarro> {
   TextEditingController _macacoController = TextEditingController();
   TextEditingController _chave_rodaController = TextEditingController();
   TextEditingController _statusController = TextEditingController();
-  TextEditingController _data_entradaController = TextEditingController();
-  TextEditingController _data_saidaController = TextEditingController();
-  TextEditingController _mecanicaController = TextEditingController();
-  TextEditingController _lavacaoController = TextEditingController();
-  TextEditingController _fipeController = TextEditingController();
-  TextEditingController _n_chassiController = TextEditingController();
-  TextEditingController _ativoController = TextEditingController();
-  TextEditingController _inativoController = TextEditingController();
+
   // String _texto_cadastro = "";
   // String _texto_atualizar = "";
   // Variável para armazenar a mensagem
   String cadastro = '';
   String atualizar = '';
 
-  _cadastrar() {
+  _cadastrar_pedido() {
     setState(() {
-      cadastro = 'Cadastro efetuado com sucesso!';
+      cadastro = 'Pedido enviado!';
     });
   }
 
-  _atualizar_cadastro() {
+  _limpar_pedido() {
     setState(() {
      _marcaController.text = '';
      _modeloController.text = '';
-     _placaController.text = '';
      _corController.text = '';
      _ano_fabController.text = '';
      _ano_modController.text = '';
      _potenciaController.text = '' ;
-     _tipoController.text = '';
-     _kmController.text = '';
-     _renavamController.text = '';
-     _ipvaController.text = '';
      _combustivelController.text = '';
-     _preco_compraController.text = '';
-     _preco_vendaController.text = '';
-     _cidade_ufController.text = '';
-     _portasController.text = '';
+     _faixa_precoController.text = '';
      _qnt_lugaresController.text = '';
      _ar_condController.text = '';
      _trava_vidrosController.text = '';
@@ -91,21 +67,7 @@ class _HomePageState extends State<CadastroCarro> {
      _macacoController.text = '';
      _chave_rodaController.text = '';
      _statusController.text = '';
-     _data_entradaController.text = '';
-     _data_saidaController.text = '';
-     _mecanicaController.text = '';
-     _lavacaoController.text = '';
-     _fipeController.text = '';
-     _n_chassiController.text = '';
-     _ativoController.text = '';
-     _inativoController.text = '';
-     atualizar = 'Cadastro atualizado com sucesso!';
-    });
-  }
-
-  _excluir() {
-    setState(() {
-    
+     atualizar = 'Dados limpos!';
     });
   }
 
@@ -127,14 +89,15 @@ class _HomePageState extends State<CadastroCarro> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "Cadastro Carro",
+                "Cadastro Pedido",
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 35,
                 ),
               ),
-              Icon(Icons.directions_car, size: 65.0),
+              Icon(Icons.shopping_cart_checkout, size: 65.0),
+              
               TextField(
                 controller: _marcaController,
                 keyboardType: TextInputType.text,
@@ -155,22 +118,6 @@ class _HomePageState extends State<CadastroCarro> {
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   labelText: "Modelo",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _placaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Placa",
                   hintText: '',
                   labelStyle: TextStyle(
                     color: Colors.black,
@@ -247,155 +194,11 @@ class _HomePageState extends State<CadastroCarro> {
               ),
 
               TextField(
-                controller: _tipoController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Tipo",
-                  hintText: 'Novo, semi-novo ou usado',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _kmController,
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  labelText: "Km",
-                  hintText: 'Digite quantos km rodados tem o carro',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _renavamController,
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  labelText: "Renavam",
-                  hintText: 'N°',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _ipvaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "IPVA",
-                  hintText: 'Pago?(s/n):',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _origemController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Origem",
-                  hintText: 'Disponível/Vendido',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
                 controller: _combustivelController,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: "Combustivel",
                   hintText: 'Gasolina/Diesel',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _preco_compraController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Preço compra",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _preco_vendaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Preço venda",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _cidade_ufController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Cidade/UF",
-                  hintText: 'Município/Estado',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _portasController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Portas",
-                  hintText: '',
                   labelStyle: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -566,124 +369,12 @@ class _HomePageState extends State<CadastroCarro> {
                 ],
               ),
 
-              TextField(
-                controller: _statusController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Status",
-                  hintText: 'Disponível? (s/n):',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _data_entradaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Data de entrada",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _data_saidaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Data de saída",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _mecanicaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Mecânica",
-                  hintText: '(s/n):',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _lavacaoController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Lavação",
-                  hintText: '(s/n):',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _fipeController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Fipe",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
-              TextField(
-                controller: _n_chassiController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "N° do chassi",
-                  hintText: '',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
               ElevatedButton(
                 onPressed: () {
-                  _cadastrar();
+                  _cadastrar_pedido();
                 },
                 child: Text(
-                  "Cadastrar",
+                  "Cadastrar pedido",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 22,
@@ -693,10 +384,10 @@ class _HomePageState extends State<CadastroCarro> {
 
               ElevatedButton(
                 onPressed: () {
-                  _atualizar_cadastro();
+                  _limpar_pedido();
                 },
                 child: Text(
-                  "Atualizar cadastro",
+                  "Limpar dados do pedido",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 22,
@@ -709,7 +400,7 @@ class _HomePageState extends State<CadastroCarro> {
                   _limpaController();
                 },
                 child: Text(
-                  "Limpar",
+                  "Limpar comentários",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 22,

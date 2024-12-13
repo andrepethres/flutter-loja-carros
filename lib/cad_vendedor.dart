@@ -410,7 +410,7 @@ class _HomePageState extends State<CadastroVendedor> {
                   _limpaController();
                 },
                 child: Text(
-                  "Limpar",
+                  "Limpar comentários",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 22,
