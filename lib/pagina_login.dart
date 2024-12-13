@@ -143,7 +143,7 @@ class _HomePageState extends State<PaginaLogin> {
                   _limpaController();
                 },
                 child: Text(
-                  "Limpar comentários",
+                  "Limpar comentários ",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 22,

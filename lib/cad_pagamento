@@ -1,13 +1,13 @@
 // CADASTRO PAGAMENTO
 
-class CadastroPagamento extends StatefulWidget {
-  CadastroPagamento({super.key});
+class CadastroLeandro extends StatefulWidget {
+  CadastroLeandro({super.key});
 
   @override
-  State<CadastroPagamento> createState() => _HomePageState();
+  State<CadastroLeandro> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<CadastroPagamento> {
+class _HomePageState extends State<CadastroLeandro> {
   TextEditingController _pagamentoController = TextEditingController();
   TextEditingController _pixController = TextEditingController();
 
