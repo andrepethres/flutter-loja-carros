@@ -1,13 +1,13 @@
-//PÁGINA DE LOGIN LOJA DE CARROS
+// CADASTRO PAGAMENTO
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(PaginaLogin());
+  runApp(Pagamento());
 }
 
-class PaginaLogin extends StatefulWidget {
-  PaginaLogin({super.key});
+class Pagamento extends StatefulWidget {
+  Pagamento({super.key});
 
   @override
   State<PaginaLogin> createState() => _HomePageState();

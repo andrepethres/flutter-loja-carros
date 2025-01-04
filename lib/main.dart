@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cad_vendedor.dart';
+import 'pagina_login.dart';
 void main() {
-  runApp( CadastroVendedor());
+  runApp( PaginaLogin());
 }
