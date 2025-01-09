@@ -1,4 +1,4 @@
-// CADASTRO PAGAMENTO
+// PAGAMENTO
 
 import 'package:flutter/material.dart';
 
@@ -10,39 +10,26 @@ class Pagamento extends StatefulWidget {
   Pagamento({super.key});
 
   @override
-  State<PaginaLogin> createState() => _HomePageState();
+  State<Pagamento> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<PaginaLogin> {
+class _HomePageState extends State<Pagamento> {
   TextEditingController _cpfController = TextEditingController();
   TextEditingController _senhaController = TextEditingController();
-  String cadastrarvendedor = '';
-  String cadastrarcliente = '';
-  String entrar = '';
+  String pix = '';
+  
 
-  _cadastrarvendedor() {
+  _pix() {
     setState(() {
-      cadastrarvendedor = 'Página de cadastro vendedor...';
+      pix = 'Chave aleatória: oiaijsdjsfpjpfjfjpjew';
     });
   }
 
-  _cadastrarcliente() {
-    setState(() {
-      cadastrarcliente = 'Página de cadastro cliente...';
-    });
-  }
-
-  _entrar() {
-    setState(() {
-      entrar = 'Entrando no sistema...';
-    });
-  }
 
   _limpaController() {
     setState(() {
-    cadastrarcliente = '';
-    cadastrarvendedor = '';
-    entrar = '';
+    pix = '';
+    
     });
   }
 
@@ -83,54 +70,12 @@ class _HomePageState extends State<PaginaLogin> {
                 ],
               ),
 
-              TextField(
-                controller: _senhaController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Senha",
-                  hintText: 'Digite sua senha corretamente:',
-                  labelStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                inputFormatters: [
-                  // Formatação para permitir entrada com vírgula
-                ],
-              ),
-
               ElevatedButton(
                 onPressed: () {
-                  _cadastrarvendedor();
+                  _pix();
                 },
                 child: Text(
-                  "Cadastrar-se como vendedor",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 22,
-                  ),
-                ),
-              ),
-
-              ElevatedButton(
-                onPressed: () {
-                  _cadastrarcliente();
-                },
-                child: Text(
-                  "Cadastrar-se como cliente",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 22,
-                  ),
-                ),
-              ),
-
-              ElevatedButton(
-                onPressed: () {
-                  _entrar();
-                },
-                child: Text(
-                  "Entrar",
+                  "Pagar com pix",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 22,
@@ -150,32 +95,6 @@ class _HomePageState extends State<PaginaLogin> {
                   ),
                 ),
               ),
-
-                 // Exibir o cadastro formatado com vírgula
-              Text(
-                cadastrarvendedor,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25.0,
-                ),
-              ),
-              // Text(
-              //   _texto_cadastro,
-              //   style: TextStyle(
-              //     color: Colors.black,
-              //     fontSize: 25.0,
-              //   ),
-              // ),
-
-              // Exibir o cadastro formatado com vírgula
-              Text(
-                cadastrarcliente,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25.0,
-                ),
-              ),
-
             ],
           ),
         ),),
