@@ -14,8 +14,8 @@ class Pagamento extends StatefulWidget {
 }
 
 class _HomePageState extends State<Pagamento> {
+  TextEditingController _pixController = TextEditingController();
   TextEditingController _cpfController = TextEditingController();
-  TextEditingController _senhaController = TextEditingController();
   String pix = '';
   
 
@@ -24,7 +24,6 @@ class _HomePageState extends State<Pagamento> {
       pix = 'Chave aleatória: oiaijsdjsfpjpfjfjpjew';
     });
   }
-
 
   _limpaController() {
     setState(() {
@@ -44,7 +43,7 @@ class _HomePageState extends State<Pagamento> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "LOJA DE CARROS PETHRES",
+                "PAGAMENTO",
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
