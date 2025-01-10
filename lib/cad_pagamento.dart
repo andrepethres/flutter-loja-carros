@@ -14,23 +14,25 @@ class Pagamento extends StatefulWidget {
 }
 
 class _HomePageState extends State<Pagamento> {
-  TextEditingController _pixController = TextEditingController();
+
   TextEditingController _cpfController = TextEditingController();
   String pix = '';
   
 
-  _pix() {
+  _efetuar_pix() {
     setState(() {
       pix = 'Chave aleatória: oiaijsdjsfpjpfjfjpjew';
+
     });
   }
 
   _limpaController() {
     setState(() {
     pix = '';
-    
+
     });
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,7 @@ class _HomePageState extends State<Pagamento> {
                   fontSize: 25,
                 ),
               ),
-              Icon(Icons.minor_crash, size: 65.0),
+              Icon(Icons.currency_exchange, size: 65.0),
               
 
               TextField(
@@ -71,7 +73,7 @@ class _HomePageState extends State<Pagamento> {
 
               ElevatedButton(
                 onPressed: () {
-                  _pix();
+                  _efetuar_pix();
                 },
                 child: Text(
                   "Pagar com pix",
@@ -94,6 +96,23 @@ class _HomePageState extends State<Pagamento> {
                   ),
                 ),
               ),
+
+                            // Exibir o cadastro formatado com vírgula
+              Text(
+                pix,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25.0,
+                ),
+              ),
+              // Text(
+              //   _texto_cadastro,
+              //   style: TextStyle(
+              //     color: Colors.black,
+              //     fontSize: 25.0,
+              //   ),
+              // ),
+
             ],
           ),
         ),),

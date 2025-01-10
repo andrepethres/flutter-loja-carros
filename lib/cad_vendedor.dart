@@ -66,16 +66,11 @@ class _HomePageState extends State<CadastroVendedor> {
     });
   }
 
-  _excluir() {
-    setState(() {
-    
-    });
-  }
-
   _limpaController() {
     setState(() {
     cadastro = '';
     atualizar = '';
+    
     });
   }
 
