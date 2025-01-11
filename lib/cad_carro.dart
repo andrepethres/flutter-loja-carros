@@ -103,12 +103,6 @@ class _HomePageState extends State<CadastroCarro> {
     });
   }
 
-  _excluir() {
-    setState(() {
-    
-    });
-  }
-
   _limpaController() {
     setState(() {
     cadastro = '';

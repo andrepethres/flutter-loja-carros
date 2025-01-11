@@ -65,14 +65,9 @@ class _HomePageState extends State<CadastroCliente> {
      atualizar = 'Cadastro atualizado com sucesso!';
     });
   }
-
-  _excluir() {
-    setState(() {
-    
-    });
-  }
-
+  
   _limpaController() {
+
     setState(() {
     cadastro = '';
     atualizar = '';

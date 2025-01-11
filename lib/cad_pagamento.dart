@@ -17,11 +17,11 @@ class _HomePageState extends State<Pagamento> {
 
   TextEditingController _cpfController = TextEditingController();
   String pix = '';
-  
 
-  _efetuar_pix() {
+
+  _efetuarpix() {
     setState(() {
-      pix = 'Chave aleatória: oiaijsdjsfpjpfjfjpjew';
+      pix = 'Chave pix e-mail: andrepethres10@gmail.com';
 
     });
   }
@@ -73,7 +73,7 @@ class _HomePageState extends State<Pagamento> {
 
               ElevatedButton(
                 onPressed: () {
-                  _efetuar_pix();
+                  _efetuarpix();
                 },
                 child: Text(
                   "Pagar com pix",
@@ -97,7 +97,7 @@ class _HomePageState extends State<Pagamento> {
                 ),
               ),
 
-                            // Exibir o cadastro formatado com vírgula
+
               Text(
                 pix,
                 style: TextStyle(
@@ -105,13 +105,7 @@ class _HomePageState extends State<Pagamento> {
                   fontSize: 25.0,
                 ),
               ),
-              // Text(
-              //   _texto_cadastro,
-              //   style: TextStyle(
-              //     color: Colors.black,
-              //     fontSize: 25.0,
-              //   ),
-              // ),
+
 
             ],
           ),
